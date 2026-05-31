@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>贪吃蛇</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="game-panel" aria-label="贪吃蛇游戏">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Snake</p>
+            <h1>贪吃蛇</h1>
+          </div>
+          <div class="score-stack" aria-live="polite">
+            <span>得分</span>
+            <strong id="score">0</strong>
+          </div>
+        </header>
+
+        <div class="canvas-wrap">
+          <canvas id="board" width="600" height="600" aria-label="游戏区域"></canvas>
+          <div class="overlay" id="overlay">
+            <p id="statusTitle">轻触开始</p>
+            <span id="statusHint">准备好刷新纪录</span>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button class="icon-btn" id="restartBtn" type="button" aria-label="重新开始" title="重新开始">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 12a8 8 0 1 1-2.34-5.66" />
+              <path d="M20 4v6h-6" />
+            </svg>
+          </button>
+          <div class="dpad" aria-label="方向控制">
+            <button class="arrow up" data-dir="up" type="button" aria-label="向上">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6" /></svg>
+            </button>
+            <button class="arrow left" data-dir="left" type="button" aria-label="向左">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg>
+            </button>
+            <button class="arrow down" data-dir="down" type="button" aria-label="向下">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+            </button>
+            <button class="arrow right" data-dir="right" type="button" aria-label="向右">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+            </button>
+          </div>
+          <button class="text-btn" id="pauseBtn" type="button">暂停</button>
+        </div>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
